@@ -7,6 +7,27 @@
 
 #include "OV7670.h"
 
+static void OV7670_Reset_Pin_Init(GPIO_TypeDef *gpio_port)
+{
+	GPIO_Pin_Setup(gpio_port, 8,GENERAL_PURPOSE_OUTPUT_PUSHPULL_PULLUP, NONE);
+}
+
+static void OV7670_PCLK_Pin_Init(GPIO_TypeDef *gpio_port)
+{
+	GPIO_Pin_Setup(gpio_port, 8,GENERAL_PURPOSE_OUTPUT_PUSHPULL_PULLUP, NONE);
+}
+
+static void OV7670_VSYNC_Pin_Init(GPIO_TypeDef *gpio_port)
+{
+	GPIO_Pin_Setup(gpio_port, 9,GENERAL_PURPOSE_OUTPUT_PUSHPULL_PULLUP, NONE);
+}
+
+static void OV7670_HREF_Pin_Init(GPIO_TypeDef *gpio_port)
+{
+	GPIO_Pin_Setup(gpio_port, 10,GENERAL_PURPOSE_OUTPUT_PUSHPULL_PULLUP, NONE);
+}
+
+
 static void OV7670_Parallel_Port_Init(GPIO_TypeDef *port){
 	GPIO_Pin_Setup(port, 0,INPUT_PULLDW, NONE);
 	GPIO_Pin_Setup(port, 1,INPUT_PULLDW, NONE);
@@ -35,10 +56,7 @@ static void OV7670_I2C_Port_Init(I2C_TypeDef *port){
 	I2C_Master_Init(OV7670_I2C);
 }
 
-static void OV7670_Reset_Init(GPIO_TypeDef *gpio_port)
-{
-	GPIO_Pin_Setup(gpio_port, 8,GENERAL_PURPOSE_OUTPUT_PUSHPULL_PULLUP, NONE);
-}
+
 
 void OV7670_Reset(GPIO_TypeDef *gpio_port)
 {
@@ -51,8 +69,6 @@ void OV7670_Init(GPIO_TypeDef *gpio_port,I2C_TypeDef *i2c_port){
 	OV7670_Parallel_Port_Init(gpio_port);
 	OV7670_I2C_Port_Init(i2c_port);
 	OV7670_Reset_Init(gpio_port);
-
-
 }
 
 
