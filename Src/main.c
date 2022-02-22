@@ -3,6 +3,9 @@
 #include "I2C.h"
 #include "GPIO.h"
 
+
+uint8_t blac_n_white_buffer[320][240];
+
 //#if !defined(__SOFT_FP__) && defined(__ARM_FP)
 //  #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 //#endif
@@ -14,7 +17,8 @@ void OV7670_Parallel_Write(GPIO_TypeDef *port, uint8_t data);
 
 void OV7670_I2C_Port_Init(I2C_TypeDef *port);
 
-
+void OV7670_Init(GPIO_TypeDef *port,I2C_TypeDef *port);
+void OV7670_Read_Image_Data(uint8_t *buffer);
 
 
 int main(void)
