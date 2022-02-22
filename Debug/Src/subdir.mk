@@ -9,6 +9,7 @@ C_SRCS += \
 ../Src/DMA.c \
 ../Src/GPIO.c \
 ../Src/I2C.c \
+../Src/OV7670.c \
 ../Src/USART.c \
 ../Src/main.c \
 ../Src/syscalls.c \
@@ -20,6 +21,7 @@ OBJS += \
 ./Src/DMA.o \
 ./Src/GPIO.o \
 ./Src/I2C.o \
+./Src/OV7670.o \
 ./Src/USART.o \
 ./Src/main.o \
 ./Src/syscalls.o \
@@ -31,6 +33,7 @@ C_DEPS += \
 ./Src/DMA.d \
 ./Src/GPIO.d \
 ./Src/I2C.d \
+./Src/OV7670.d \
 ./Src/USART.d \
 ./Src/main.d \
 ./Src/syscalls.d \
@@ -45,7 +48,7 @@ Src/%.o: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/Console.d ./Src/Console.o ./Src/DMA.d ./Src/DMA.o ./Src/GPIO.d ./Src/GPIO.o ./Src/I2C.d ./Src/I2C.o ./Src/USART.d ./Src/USART.o ./Src/main.d ./Src/main.o ./Src/syscalls.d ./Src/syscalls.o ./Src/sysmem.d ./Src/sysmem.o ./Src/system_stm32f4xx.d ./Src/system_stm32f4xx.o
+	-$(RM) ./Src/Console.d ./Src/Console.o ./Src/DMA.d ./Src/DMA.o ./Src/GPIO.d ./Src/GPIO.o ./Src/I2C.d ./Src/I2C.o ./Src/OV7670.d ./Src/OV7670.o ./Src/USART.d ./Src/USART.o ./Src/main.d ./Src/main.o ./Src/syscalls.d ./Src/syscalls.o ./Src/sysmem.d ./Src/sysmem.o ./Src/system_stm32f4xx.d ./Src/system_stm32f4xx.o
 
 .PHONY: clean-Src
 

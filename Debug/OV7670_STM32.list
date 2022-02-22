@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  000102c8  2**0
                   CONTENTS, READONLY
- 12 .debug_info   0000102c  00000000  00000000  000102f8  2**0
+ 12 .debug_info   00001120  00000000  00000000  000102f8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 0000031b  00000000  00000000  00011324  2**0
+ 13 .debug_abbrev 0000032a  00000000  00000000  00011418  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000070  00000000  00000000  00011640  2**3
+ 14 .debug_aranges 00000070  00000000  00000000  00011748  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000048  00000000  00000000  000116b0  2**3
+ 15 .debug_ranges 00000048  00000000  00000000  000117b8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  000003f9  00000000  00000000  000116f8  2**0
+ 16 .debug_macro  00000411  00000000  00000000  00011800  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00000bf0  00000000  00000000  00011af1  2**0
+ 17 .debug_line   00000c0c  00000000  00000000  00011c11  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00055d84  00000000  00000000  000126e1  2**0
+ 18 .debug_str    00055dda  00000000  00000000  0001281d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  00068465  2**0
+ 19 .comment      00000053  00000000  00000000  000685f7  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000000ac  00000000  00000000  000684b8  2**2
+ 20 .debug_frame  000000ac  00000000  00000000  0006864c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -77,8 +77,8 @@ Disassembly of section .text:
  80001d4:	080002a8 	.word	0x080002a8
 
 080001d8 <main>:
-void OV7670_Init(GPIO_TypeDef *gpio_port,I2C_TypeDef *i2c_port);
-void OV7670_Read_Image_Data(uint8_t *buffer);
+
+
 
 
 int main(void)

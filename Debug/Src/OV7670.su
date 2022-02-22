@@ -1,0 +1,6 @@
+OV7670.c:10:13:OV7670_Parallel_Port_Init	16	static
+OV7670.c:22:16:OV7670_Parallel_Read	24	static
+OV7670.c:28:13:OV7670_Parallel_Write	16	static
+OV7670.c:32:13:OV7670_I2C_Port_Init	16	static
+OV7670.c:38:6:OV7670_Init	16	static
+OV7670.c:45:6:OV7670_Read_Image_Data	16	static

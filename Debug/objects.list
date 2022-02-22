@@ -2,6 +2,7 @@
 "./Src/DMA.o"
 "./Src/GPIO.o"
 "./Src/I2C.o"
+"./Src/OV7670.o"
 "./Src/USART.o"
 "./Src/main.o"
 "./Src/syscalls.o"
