@@ -1,2 +1,2 @@
-# OV7670 
-## STM32 Driver
+# OV7670 (in developement)
+## STM32 Driver for OV7670
