@@ -1,0 +1,5 @@
+core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+core_cm4.h:1816:22:__NVIC_SetPriority	16	static
+DMA.c:11:6:DMA_Init	8	static
+DMA.c:52:6:DMA_Interrupt	8	static
+DMA.c:132:6:DMA_Enable	8	static

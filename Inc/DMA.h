@@ -9,10 +9,8 @@
 #define DMA_DMA_H_
 
 #include "main.h"
-#include "SPI/SPI.h"
-#include "I2S/I2S.h"
-#include "I2C/I2C.h"
-#include "USART/USART.h"
+#include "I2C.h"
+#include "USART.h"
 
 #define DMA_Peripheral_To_Memory 0
 #define DMA_Memory_To_Peripheral 1

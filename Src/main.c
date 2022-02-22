@@ -17,7 +17,7 @@ void OV7670_Parallel_Write(GPIO_TypeDef *port, uint8_t data);
 
 void OV7670_I2C_Port_Init(I2C_TypeDef *port);
 
-void OV7670_Init(GPIO_TypeDef *port,I2C_TypeDef *port);
+void OV7670_Init(GPIO_TypeDef *gpio_port,I2C_TypeDef *i2c_port);
 void OV7670_Read_Image_Data(uint8_t *buffer);
 
 

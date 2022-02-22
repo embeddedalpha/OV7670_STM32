@@ -9,7 +9,7 @@
 #define I2C_I2C_H_
 
 #include "main.h"
-#include "GPIO/GPIO.h"
+#include "GPIO.h"
 
 #define I2C_Fast_Mode	1
 #define I2C_Normal_Mode	0

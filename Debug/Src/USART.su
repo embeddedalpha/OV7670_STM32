@@ -1,0 +1,5 @@
+USART.c:12:6:UART_Init	24	static
+USART.c:76:6:UART_Transmit_Byte	24	static
+USART.c:84:6:UART_Transmit_Buffer	40	static
+USART.c:96:6:UART_Receive_Byte	24	static
+USART.c:103:6:USART_Transceive	24	static
