@@ -44,8 +44,8 @@ void DMA_Init(DMA_Config DMA)
 							  );
 
 	DMA.DMA_Stream -> NDTR = DMA.packet_length;
-	DMA.DMA_Stream -> PAR = DMA.source_address;
-	DMA.DMA_Stream -> M0AR = DMA.destination_address;
+	DMA.DMA_Stream -> PAR = (uint32_t)DMA.source_address;
+	DMA.DMA_Stream -> M0AR = (uint32_t)DMA.destination_address;
 
 }
 

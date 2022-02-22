@@ -2,7 +2,7 @@
 #include "main.h"
 #include "I2C.h"
 #include "GPIO.h"
-
+#include "OV7670.h"
 
 uint8_t blac_n_white_buffer[320][240];
 
@@ -11,14 +11,6 @@ uint8_t blac_n_white_buffer[320][240];
 //#endif
 
 
-void OV7670_Parallel_Port_Init(GPIO_TypeDef *port);
-uint8_t OV7670_Parallel_Read(GPIO_TypeDef *port);
-void OV7670_Parallel_Write(GPIO_TypeDef *port, uint8_t data);
-
-void OV7670_I2C_Port_Init(I2C_TypeDef *port);
-
-void OV7670_Init(GPIO_TypeDef *gpio_port,I2C_TypeDef *i2c_port);
-void OV7670_Read_Image_Data(uint8_t *buffer);
 
 
 int main(void)

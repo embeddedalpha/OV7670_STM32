@@ -62,7 +62,6 @@ for(int i = 0; i < 100; i++)
 	va_list args;
 	va_start(args, msg);
 	vsprintf(buff, msg, args);
-	int x = strlen(buff);
 
 	for(int i = 0; i< strlen(buff); i++)
 	{

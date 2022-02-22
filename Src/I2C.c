@@ -24,8 +24,8 @@ void I2C_Master_Init(I2C_Config I2C)
 			//PB3 -> SDA
 			//PB4 -> SDA
 			RCC -> APB1ENR |= RCC_APB1ENR_I2C2EN;
-			GPIO_Pin_Setup('B', 3, ALTERNATE_FUNCTION_OUTPUT_OPENDRAIN_PULLUP, I2C2_SCL);
-			GPIO_Pin_Setup('B', 4, ALTERNATE_FUNCTION_OUTPUT_OPENDRAIN_PULLUP, I2C2_SDA);
+			GPIO_Pin_Setup(GPIOB, 3, ALTERNATE_FUNCTION_OUTPUT_OPENDRAIN_PULLUP, I2C2_SCL);
+			GPIO_Pin_Setup(GPIOB, 4, ALTERNATE_FUNCTION_OUTPUT_OPENDRAIN_PULLUP, I2C2_SDA);
 
 		}
 		if (I2C.I2C == I2C3)
@@ -34,8 +34,8 @@ void I2C_Master_Init(I2C_Config I2C)
 			RCC -> AHB1ENR |= RCC_AHB1ENR_GPIOAEN | RCC_AHB1ENR_GPIOBEN;
 			//PA8 -> SDA
 			//PB10 -> SCL
-			GPIO_Pin_Setup('A', 8, ALTERNATE_FUNCTION_OUTPUT_OPENDRAIN_PULLUP, I2C3_SCL);
-			GPIO_Pin_Setup('B', 10, ALTERNATE_FUNCTION_OUTPUT_OPENDRAIN_PULLUP, I2C3_SDA);
+			GPIO_Pin_Setup(GPIOA, 8, ALTERNATE_FUNCTION_OUTPUT_OPENDRAIN_PULLUP, I2C3_SCL);
+			GPIO_Pin_Setup(GPIOB, 10, ALTERNATE_FUNCTION_OUTPUT_OPENDRAIN_PULLUP, I2C3_SDA);
 		}
 
 		if (I2C.mode)
@@ -62,7 +62,6 @@ void I2C_Master_Init(I2C_Config I2C)
 
 void I2C_Master_Start(I2C_Config I2C)
 {
-	volatile int temp;
 //	temp = I2C.I2C -> SR1 | I2C.I2C -> SR2;
 	I2C.I2C -> CR1 |= I2C_CR1_START;
 	while(!(I2C.I2C -> SR1 & I2C_SR1_SB)){}
@@ -96,7 +95,7 @@ void I2C_Master_Send_Buffer(I2C_Config I2C, uint8_t *data, int length)
 	for(int i = 0; i < length; i++)
 	{
 		while((I2C.I2C -> SR1 & 0x80) == 0){}
-		I2C.I2C -> DR = data;
+		I2C.I2C -> DR = data[i];
 		while((I2C.I2C -> SR1 & 0x80) == 0){}
 	}
 }
